@@ -1,3 +1,4 @@
+//Single ex
 function examplePromise(url) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
