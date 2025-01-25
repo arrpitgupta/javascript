@@ -61,3 +61,22 @@ const grouped = numbersReduce.reduce(
   { even: [], odd: [] }
 );
 console.log(grouped);
+
+// .find(), .map(), .reduce() -- together
+const products = [
+  { id: 1, name: "Laptop", price: 1000 },
+  { id: 2, name: "Phone", price: 500 },
+  { id: 3, name: "Tablet", price: 800 },
+];
+
+const expensiveProduct = products.find((product) => product.price > 800);
+console.log(expensiveProduct); //output - laptop
+
+const productNames = products.map((product) => product.name);
+console.log(productNames); //output - "laptop, Phone, Tablet"
+
+const totalPrice = products.reduce(
+  (total, product) => total + product.price,
+  0
+);
+console.log(totalPrice); //output - 1000+500+800 = 2300 

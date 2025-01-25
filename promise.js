@@ -65,3 +65,37 @@ Promise.all([fetchUser(), fetchPosts(), fetchComments()])
   .finally(() => {
     console.log("All operations complete.");
   });
+
+//More exx:
+  function firstPromise(hi) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log(`this works ${hi}`);
+        resolve(`First resolved with ${hi}`);
+      }, 1000);
+    });
+  }
+  
+  function secondPromise(hii) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log(`this works ${hii}`);
+        resolve(`Second resolved with ${hii}`);
+      }, 2000);
+    });
+  }
+  
+  
+  Promise.all([firstPromise("Hi"), secondPromise("Hello")])
+    .then(([first, second]) => {
+      console.log("Execution success");
+      console.log(first); 
+      console.log(second); 
+    })
+    .catch((err) => {
+      console.error(`Error ${err}`);
+    })
+    .finally(() => {
+      console.log("All promise execution success");
+    });
+  
