@@ -80,3 +80,16 @@ const totalPrice = products.reduce(
   0
 );
 console.log(totalPrice); //output - 1000+500+800 = 2300 
+
+const arr = [1,2,3,5,67,78]
+const MapArr =  arr.map ((array) => array * 2 ) 
+const FindArr =  arr.find ((array) => array > 2 ) 
+const ReduceArr =arr.reduce ((array,total) => array + total ) ;
+
+console.log(MapArr);
+setTimeout(()=>{
+   console.log(FindArr); 
+},2000);
+setTimeout(()=>{
+   console.log(ReduceArr); 
+},3000);
