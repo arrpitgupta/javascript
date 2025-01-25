@@ -14,3 +14,12 @@ const getName = () => {
 setTimeout(() => {
   getName();
 }, 2000);
+
+function test(a, b) {
+  if (a == b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(test(5, "5"));
