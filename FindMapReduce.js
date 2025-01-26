@@ -11,7 +11,7 @@ const users = [
 ];
 
 const user = users.find((user) => user.name === "Bob");
-console.log(user);
+console.log(user); //output : Bob
 
 //Map
 const numbersMap = [1, 2, 3, 4, 5];
