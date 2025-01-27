@@ -9,3 +9,12 @@ function secondFunc() {
 }
 
 firstFunc(secondFunc);
+function exCallback(callback){
+  setTimeout(()=>{console.log("callback loading ...");
+    callback();},2000)
+  
+}
+function useCallback(){
+  console.log("callback loaded");
+}
+useCallback(exCallback);

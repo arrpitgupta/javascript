@@ -23,11 +23,4 @@ function test(a, b) {
   }
 }
 console.log(test(5, "5"));
-function exCallback(callback){
-  console.log("callback loading ...");
-  callback();
-}
-function useCallback(){
-  console.log("callback loaded");
-}
-useCallback(exCallback);
+
