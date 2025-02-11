@@ -22,6 +22,7 @@ examplePromise("https://api.example.com/data")
     console.log("Promise handling complete.");
   });
 
+  
 //Multiple Api calls
 
 const fetchUser = () => {
